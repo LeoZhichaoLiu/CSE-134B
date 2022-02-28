@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Simple HTML Web for HW2 in CSE134B" />
+	<meta name="keywords" content="HTML" />
+	<meta name="author" content="Zhichao Liu" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Native Dialogs</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENYWLPD1S5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ENYWLPD1S5');
+    </script>
+</head>
+<body>
+    <!-- The header -->
+    <header style="font-size:20px;">Simple Dialogs</header>
+    <!-- Four buttons -->
+    <menu>
+        <button id="alert" value="default">Alert</button>
+        <button id="confirm" value="default">Confirm</button>
+        <button id="prompt" value="default">Prompt</button>
+        <button id="safer" value="default">Safer Prompt</button>
+    </menu>
+    <!-- Place for output -->
+    <output id="res" aria-live="polite"></output>
+    <script type="text/javascript" src="DOMPurify-main/dist/purify.min.js"></script>
+    <script type="text/javascript">
+        
+        // If press alert, show the message
+        const al = document.getElementById("alert");
+        al.addEventListener("click", () => { alert("alert Pressed!"); }, false);
+      
+        // Function for the comfirm dialog.
+        function confirmMessage() {  
+            // If comfirm yes, return true, else return false.        
+            if (confirm ("Do you confirm this?")) {
+                document.getElementById("res").innerHTML = 
+                         "The value returned by the confirm method is : true";
+            } else {
+                document.getElementById("res").innerHTML = 
+                         "The value returned by the confirm method is : false";
+            }
+        }
+        
+        // We add click feature to that button
+        const co = document.getElementById("confirm");
+        co.addEventListener("click", function(){confirmMessage()}, false);
+        
+        // Function for the prompt dialog
+        function promptMessage (){
+            let p = prompt("Please enter your prompt");
+            // If we input something, output the result.
+            if (p != null) {
+                document.getElementById("res").innerHTML =
+                     "The value returned by the prompt method is : " + p;
+            } else {
+                document.getElementById("res").innerHTML =
+                     "User didn’t enter anything";
+            }
+        }
+        
+        // We add click feature to that button
+        const pr = document.getElementById("prompt");
+        pr.addEventListener("click", function(){promptMessage()}, false);
+        
+        // Similar to prompt, just use DOMPurify to ensure security
+        function safeMessage (){
+            let g = prompt("Please enter your prompt");
+            let clean = DOMPurify.sanitize(g);
+            if (clean != null) {
+                document.getElementById("res").innerHTML =
+                     "The value returned by the prompt method is : " + clean;
+            } else {
+                document.getElementById("res").innerHTML =
+                     "User didn’t enter anything";
+            }
+        }
+        // We add click feature to that button
+        const sa = document.getElementById("safer");
+        sa.addEventListener("click", function(){safeMessage()}, false);
+    </script>
+</body>
+
+</html>

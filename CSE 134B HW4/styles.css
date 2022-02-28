@@ -1,0 +1,528 @@
+html {font: 16px 'Open Sans Condensed', 'Roboto Condensed', Verdana, sans-serif;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.75em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1em;}
+p {font-size: 1em;}
+
+/* layout using CSS Flexbox*/
+.nav-ul {
+    display: flex;
+}
+.item {
+    flex-grow:1;
+    height: 50px;
+    border: .1em dotted yellowgreen;
+} 
+.item + .item {
+    margin-left: 2%;
+}
+.boxes {
+    display: flex;
+    background-image: url("background3.png");
+}
+.box {
+    flex-grow: 1;
+    padding: 1.5em 1em;
+    width: 25%;
+    height: 250px;
+    border: .1em solid red;
+} 
+.box:hover {
+    padding: 1.6em 1.2em;
+}
+.box + .box {
+    margin-left: 2%;
+}
+.foot-nav {
+    display: flex;
+}
+.foot-item {
+    flex-grow: 1;
+    height: 50px;
+}
+.foot-item + .foot-item {
+    margin-left: 2%;
+}
+.foot-author {
+    margin-left: 35%;
+}
+.row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row-keep {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.left-contact-info {
+    flex-grow: 1;
+    border: .1em solid rgb(207, 66, 23);
+    background-color: aquamarine;
+    background-image:url("background2.png");
+    color:aliceblue;
+    text-align: center;
+    height: 200px;
+}
+.right-contact-info {
+    flex-grow: 1;
+    text-align: center;
+    height: 200px;
+    background-image :url("wallpaper.gif");
+    color:white;
+}
+.left-contact-info + .right-contact-info {
+    margin-left: 2%;
+}
+.Writing {
+    flex-grow: 1;
+    background-color:aquamarine;
+    border: .1em solid rgb(207, 66, 23);
+    background-image: url("background1.png");
+}
+.Login {
+    flex-grow: 1;
+    background-color:darkseagreen;
+    border: .1em solid rgb(207, 66, 23);
+}
+
+.interests {
+    display: flex;
+    justify-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.intro-button {
+    flex-grow: 1;
+}
+.pic-for-Chelsea {
+    flex: 1 1 auto;
+}
+.video-for-Chelsea {
+    flex: 1 1 auto;
+}
+
+/*header*/
+header  {
+    background-image: url("UCSD.jpg");
+    background-color: #cccccc;
+}
+
+/*Information*/
+.Information{
+    text-align: center; 
+    background-image:url("naruto-background.gif");
+    color:cornsilk;
+}
+.three-button {
+    display: block;
+    padding: 1.75em 4em;
+    font-size: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:lightsteelblue;
+    color:rgb(207, 66, 23);
+    border: .1em;
+    cursor: pointer;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    animation: shift-steel 3s linear infinite;
+    transition: width 2s, height 4s;
+}
+.three-button:hover {
+    padding: 2.2em 5em;
+}
+.rate-language {
+    margin-top: 20px;
+    font-family: 'Lucida Sans Regular';
+}
+.range-form {
+    margin-top: 20px;
+}
+
+/*Picture*/
+.Pictures {
+    text-align: center;
+}
+#Canvas_text {
+    transform:rotate(3deg);
+}
+
+/*writing*/
+.Writing {
+    text-align: center;
+    width:50%;
+}
+.Writing h2 {
+    font-size: 1.8em;
+    font-family: times;
+}
+.Writing p {
+    font-size: 1.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.writing-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+.search-form {
+    padding: .75em 1.25em;
+}
+.search-button {
+    display: block;
+    padding: .75em 1.25em;
+    font-size: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: red;
+    color: black;
+    border: .1em;
+    cursor: pointer;
+    margin-top:15px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width 2s, height 4s;
+}
+.search-button:hover {
+    padding: 1em 1.5em;
+}
+.writing-button {
+    display: block;
+    padding: .75em .75em;
+    font-size: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: blue;
+    color: white;
+    border: .1em;
+    cursor: pointer;
+    margin-top:15px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width 2s, height 4s;
+}
+.writing-button:hover {
+    padding: 1em 1em;
+}
+
+/*login*/
+.Login {
+    text-align: center;
+    background-image: url("UCSD.jpg");
+    background-color: #cccccc;
+    width:50%;
+}
+.Login p {
+    font-size: 1.5em;
+    color:antiquewhite;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.Login h2 {
+    font-size: 1.8em;
+    font-family: times;
+}
+.register_form {
+    margin-top:25px;
+}
+.Login button {
+    display: block;
+    border-radius: 50%;
+    padding: .75em 1.25em;
+    font-size: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: red;
+    color: black;
+    border: .1em;
+    cursor: pointer;
+    margin-top:15px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width 2s, height 4s;
+}
+.Login button:hover {
+    padding: 1em 1.5em;
+}
+.make_rate {
+    color:whitesmoke;
+    font-family:Helvetica;
+    margin-top:30px;
+}
+
+
+/*contact*/
+.contact-header-info h2 {
+    font-size: 1.3em;
+    font-family: times;
+}
+.contact-header-info {
+    width:60%;
+}
+.mario {
+    width:20%;
+}
+.fill_form {
+    display: inline-block;
+}
+.fill_form_message {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right-contact-info button {
+    display: block;
+    padding: .75em 1.25em;
+    font-size: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: greenyellow;
+    color: black;
+    border: .1em;
+    cursor: pointer;
+    margin:auto;
+}
+.right-contact-info h2 {
+    font-size: 1.3em;
+}
+.text-center {
+    text-align: center;
+}
+.Contact {
+    text-align: center;
+}
+.blue-color {
+    background-color:rgba(0, 122, 255, 1);
+    color:#fff;
+}
+.green-color {
+    background-color:bisque;
+}
+
+
+/*Boxes*/
+.box h2 {
+    font-size:1.4em;
+    text-align: center;
+}
+.box p {
+    font-size:1em;
+    height: 5em;
+}
+.box .button {
+    margin: 2em auto;
+    animation: shift-red 2s linear infinite;
+    transition: width 2s, height 4s;
+}
+.box button:hover {
+    padding: 1em 1.5em;
+}
+
+.head-link {
+    text-align: center;
+    color:white;
+}
+
+.button {
+    display: block;
+    padding: .75em 1.25em;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: red;
+    color: black;
+    border: .1em;
+    cursor: pointer;
+}
+
+/*Animation*/
+@keyframes shift-color-blue {
+    from {background-color:rgba(0, 122, 255, 1);}
+    to {background-color:aqua;}
+}
+.shift-color-animated {
+    animation: shift-color-blue 4s linear infinite;
+}
+
+@keyframes shift-steel {
+    from {background-color:lightsteelblue;}
+    to {background-color:aquamarine;}
+}
+
+@keyframes shift-red {
+    from {background-color:red;}
+    to {background-color:darkmagenta;}
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+.rotate {
+    animation: rotation 8s infinite linear;
+}   
+
+/*Reponsed model*/
+@media screen and (max-width: 680px) {
+    .box p{ 
+        height:6.5em;
+    }
+    .row {
+        display: block;
+    }
+    .box button {
+        padding: .25em .6em;
+        margin-bottom: auto;
+        margin-top: 2%;
+    }
+    .box button:hover {
+        padding: .5em .7em;
+    }
+    .Writing {
+        width:100%;
+    }
+    .Login {
+        width:100%;
+    }
+    .box h2 {
+        font-size:.8em;
+    }
+    .box p {
+        font-size:.3em;
+    }
+    .box {
+        height: 170px;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .full-video,
+    .titan-pic,
+    .video-for-Chelsea {
+        width : 450px;
+        height : 300px;
+    }
+    .row {
+        display: block;
+    }
+    .box button {
+        padding: .4em .65em;
+        margin-bottom: auto;
+        margin-top: 2%;
+    }
+    .box button:hover {
+        padding: .6em .85em;
+    }
+    .box h2 {
+        font-size:1em;
+    }
+    .box p {
+        font-size:.4em;
+    }
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .box {
+        flex: 1 1 35%;
+        margin-left: 2%;
+        height: 200px;
+    } 
+    .nav-ul {
+        display: block;
+    }
+    .foot-nav {
+        display: block;
+    }
+    .item {
+        height:25px;
+    }
+    .foot-item {
+        height:25px;
+    }
+    .rotate {
+        width:40px;
+        height:40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .three-button {
+        padding: 1.5em 3em;
+    }
+    .three-button:hover {
+        padding: 1.8em 3.5em;
+    }
+    .box button {
+        padding: .25em .5em;
+        margin-bottom: auto;
+        margin-top: 2%;
+    }
+    .box button:hover {
+        padding: .3em .7em;
+    }
+    .box h2 { 
+        font-size:.75em;
+    }
+    .box p {
+        font-size:.25em;
+    }
+    .row {
+        display: block;
+    }
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .box {
+        flex: 1 1 35%;
+        height: 150px;
+    } 
+    .text-message {
+        width: 25em;
+    }
+    .full-video,
+    .titan-pic,
+    .video-for-Chelsea {
+        width : 360px;
+        height : 250px;
+    }
+    .foot-author {
+        font-size: .5em;
+    }
+    .nav-ul {
+        display: block;
+    }
+    .foot-nav {
+        display: block;
+    }
+    .item {
+        height:25px;
+    }
+    .foot-item {
+        height:25px;
+    }
+    .rotate {
+        width:30px;
+        height:30px;
+    }
+}
+
+
+
+
+
+
+
+
+

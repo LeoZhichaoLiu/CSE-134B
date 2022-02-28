@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Simple HTML Web for HW2 in CSE134B" />
+	<meta name="keywords" content="HTML" />
+	<meta name="author" content="Zhichao Liu" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+	<title>CRUD</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENYWLPD1S5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ENYWLPD1S5');
+    </script>
+</head>
+<body>
+    <header style="font-size:20px;">Blog Post</header>
+    <!-- Create the dialog for adding one item -->
+    <dialog id = "add-dialog">
+        <form method="dialog">
+            <!-- testarea and button for input -->
+            <label for="add-title">Title: </label>
+            <textarea id="add-title" rows="1"></textarea>
+            <label for="add-date">Date: </label>
+            <input type="date" id="add-date" rows="1"></input>
+            <label for="add-summary">Summary: </label>
+            <textarea id="add-summary" rows="3"></textarea>
+            <!-- save and cancel button -->
+            <menu>
+              <button id="add-cancel" value="default">Cancel</button>
+              <button id="add-save" value="default">Save</button>
+            </menu>
+        </form>
+    </dialog>
+    <!-- Create the dialog for edit one item -->
+    <dialog id = "edit-dialog">
+        <form method="dialog">
+            <!-- testarea and button for input -->
+            <label for="edit-title">Title: </label>
+            <textarea id="edit-title" rows="1"></textarea>
+            <label for="edit-date">Date: </label>
+            <input type="date" id="edit-date" rows="1"></input>
+            <label for="edit-summary">Summary: </label>
+            <textarea id="edit-summary" rows="3"></textarea>
+            <!-- save and cancel button -->
+            <menu>
+              <button id="edit-cancel" value="default">Cancel</button>
+              <button id="edit-save" value="default">Save</button>
+            </menu>
+        </form>
+    </dialog>
+    <!-- Create the dialog for cancel one item -->
+    <dialog id = "delete-dialog">
+        <form method="dialog">
+            <label> <p>Delete post?</p></label>
+            <!-- save and cancel button -->
+            <menu>
+              <button id="delete-cancel" value="default">Cancel</button>
+              <button id="delete-save" value="default">Ok</button>
+            </menu>
+        </form>
+    </dialog>
+     <!-- Create a tabl for storing the information-->
+    <table id="crud-table">
+        <tr>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Summary</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+    </table>
+    <!-- Style for table -->
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+     <!-- button for add new -->
+    <menu>
+        <button id="alert3">Add Blog</button>
+    </menu>
+
+    <script type="text/javascript" src="DOMPurify-main/dist/purify.min.js"></script>
+    <script type="module" src="blog.js"></script>
+</body>
+</html>

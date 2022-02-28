@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Simple HTML Web for HW2 in CSE134B" />
+	<meta name="keywords" content="HTML" />
+	<meta name="author" content="Zhichao Liu" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Custom Dialogs</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENYWLPD1S5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ENYWLPD1S5');
+    </script>
+</head>
+<body>
+     <!-- header -->
+    <header style="font-size:20px;">Custom Dialogs</header>
+    <!-- dialog for alert -->
+    <dialog id = "alert-dialog">
+        <form method="dialog">
+            <p><label>Alter pressed! 
+            </label></p>
+            <!-- button -->
+            <menu>
+              <button id="alert-ok" value="default">OK</button>
+            </menu>
+        </form>
+    </dialog>
+     <!--  dialog for confirm -->
+    <dialog id = "confirm-dialog">
+        <form method="dialog">
+            <p><label>Do you confirm this? 
+            </label></p>
+            <!-- button -->
+            <menu>
+              <button id="confirm-cancel" value="default">Cancel</button>
+              <button id="confirm-ok" value="default">OK</button>
+            </menu>
+        </form>
+    </dialog>
+    <!-- dialog for prompt -->
+    <dialog id = "prompt-dialog">
+        <form method="dialog">
+            <p><label>Please enter your prompt: 
+            </label></p>
+            <textarea id="prompt-form" rows="1"></textarea>
+            <!-- button -->
+            <menu>
+              <button id="prompt-cancel" value="default">Cancel</button>
+              <button id="prompt-ok" value="default">OK</button>
+            </menu>
+        </form>
+    </dialog>
+    <!-- three buttons -->
+    <menu>
+        <button id="alert2">Alert</button>
+        <button id="confirm2">Confirm</button>
+        <button id="prompt2">Prompt</button>
+    </menu>
+    <!-- output -->
+    <output id="custom_output" aria-live="polite"></output>
+    
+    <script type="text/javascript" src="DOMPurify-main/dist/purify.min.js"></script>
+    <script type="text/javascript" type="module" src="customdialog.js"></script>
+   
+</body>
+</html>

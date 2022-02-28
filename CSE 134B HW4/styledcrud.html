@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Styled HTML Web for HW2 in CSE134B" />
+	<meta name="keywords" content="HTML" />
+	<meta name="author" content="Zhichao Liu" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>styledCRUD</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENYWLPD1S5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ENYWLPD1S5');
+    </script>
+</head>
+<!-- Give body image background -->
+<body style="background-image: url('background1.png');">
+    <!-- Give header color background -->
+    <header style="font-size:20px;text-align:center;">Blog Post</header>
+
+    <style>
+        header {
+            background-color:#04AA6D;
+            color: white;
+        }       
+    </style>
+    
+    <!-- Create the dialog for adding one item -->
+    <dialog id = "add-dialog2" style="background-image: url('naruto-background.gif');">
+        <form method="dialog">
+            <!-- testarea and button for input -->
+            <div class="row" style="display: flex; justify-content: center;">
+                <div class="item">
+                    <textarea id="add-title2" placeholder="Title" rows="1"></textarea>
+                </div>
+                <div class="item">
+                    <input type="date" id="add-date2" rows="1"></input>
+                </div>
+            </div>
+            <div class="row" style="display:flex; justify-content:center;">
+                <textarea id="add-summary2" placeholder="Any Message" cols="40" rows="3"></textarea>
+            </div>
+            <!-- save and cancel button -->
+            <menu style="display: flex; justify-content: center;">
+                <div class="item">
+                    <button id="add-cancel2" value="default">Cancel</button>
+                </div>
+                 <div class="item">
+                    <button id="add-save2" value="default">Save</button>
+                </div>
+            </menu>
+        </form>
+    </dialog>
+    <!-- Create the dialog for edit one item -->
+    <dialog id = "edit-dialog2" style="background-image: url('naruto-background.gif');">
+        <form method="dialog">
+            <!-- testarea and button for input -->
+            <div class="row" style="display: flex; justify-content: center;">
+                <div class="item">
+                    <textarea id="edit-title2" placeholder="Title" rows="1"></textarea>
+                </div>
+                <div class="item">
+                    <input type="date" id="edit-date2" rows="1"></input>
+                </div>
+            </div>
+            <div class="row" style="display: flex; justify-content: center;">
+                <textarea id="edit-summary2" placeholder="Any Message" cols="40" rows="3"></textarea>
+            </div>
+            <!-- save and cancel button -->
+            <menu style="display:flex; justify-content:center;">
+               <div class="item">
+                   <button id="edit-cancel2" value="default">Cancel</button>
+               </div>
+               <div class="item">
+                   <button id="edit-save2" value="default">Save</button>
+               </div>
+            </menu>
+        </form>
+    </dialog>
+    <!-- Create the dialog for cancel one item -->
+    <dialog id = "delete-dialog2" style="background-image: url('naruto-background.gif');color:white;">
+        <form method="dialog">
+            <label style="text-align: center;"> <p>Delete post?</p></label>
+            <!-- save and cancel button -->
+            <menu style="display:flex; justify-content:center;">
+                <div class="item">
+                    <button id="delete-cancel2" value="default">Cancel</button>
+                </div>
+                <div class="item">
+                    <button id="delete-save2" value="default">Ok</button>
+                </div>
+            </menu>
+        </form>
+    </dialog>
+    <!-- Create a tabl for storing the information-->
+    <table id="crud-table2" style="table-layout: auto;">
+        <tr>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Summary</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+    </table>
+    <!-- button for add new -->
+    <menu id="add-menu">
+        <button id="alert4"><img src="add.png"/></button>
+    </menu>
+
+    <style>
+        /* make padding index */
+        .item + .item {
+            margin-left: 10px;
+        }
+        /* mgive stile for button and icon */
+        #add-menu {
+            background-image: url("wallpaper.gif");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            border: 3px solid green;
+        }
+        .edit_b img, .delete_b img, #alert4 img {
+            height: 30px;
+        }
+        /* give style for table elements*/
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width:100%;
+        }
+        td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            border: 1px solid #dddddd;
+            text-align: center;
+        }
+        tr:hover {
+            background-color: coral;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+    
+    <script type="text/javascript" src="DOMPurify-main/dist/purify.min.js"></script>
+    <script type="module" src="styledblog.js"></script>
+</body>
+</html>

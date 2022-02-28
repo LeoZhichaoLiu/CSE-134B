@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Simple HTML Web for HW2 in CSE134B" />
+	<meta name="keywords" content="HTML" />
+	<meta name="author" content="Zhichao Liu" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+	<title>CSE 134B Homework 4 Website</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ENYWLPD1S5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-ENYWLPD1S5');
+    </script>
+</head>
+<body>
+	<header>
+        <h1 class="green-color" style="border-style:dotted;text-align: center;">Welcome to Zhichao Liu's Portfolio Website</h1>
+        <nav>
+            <ul class="nav-ul blue-color shift-color-animated">
+                <li class="item"><a href="#" style="color: white">Home</a></li>
+                <li class="item"><a href="#Information" style="color: white">Information</a></li>
+                <li class="item"><a href="#Writing" style="color: white">Skills</a></li>
+                <li class="item"><a href="#Pictures" style="color: white">Experience</a></li>
+                <li class="item"><a href="#Game" style="color: white">Education</a></li>
+                <li class="item"><a href="#Login" style="color: white">Login</a></li>
+                <li class="item"><a href="#Contact" style="color: white">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="head-link"> You can find my <span>school website</span> in <a href="https://ucsd.edu" style="color:antiquewhite">UCSD Website</a> </p>
+    </header>
+
+    <main class="main">
+        
+        <section class="boxes green-color">
+            <hr />
+            <!--<h2>Quick View</h2>-->
+            <section class="box">
+                <h2>Information</h2>
+                <p>Information about me, some experience and interest</p>
+                <button class="button" type="button" value="more">MORE</button>
+            </section>
+            <section class="box">
+                <h2>Skills</h2>
+                <p>I will introduce some skills I have, and what courses I learnt that help me </p>
+                <button class="button" type="button" value="more">MORE</button>
+            </section>
+            <section class="box">
+                <h2>Experience</h2>
+                <p>Some experience in projects or industry that represent my ability on CS.</p>
+                <button class="button" type="button" value="more">MORE</button>
+            </section>
+            <section class="box">
+                <h2>Education</h2>
+                <p>My education experience, some notes for different courses.</p>
+                <button class="button" type="button" value="more">MORE</button>
+            </section>
+           
+        </section>
+            
+
+        <section class="Information" id="Information">
+            <hr />
+            <h2>Introduction to myself</h2>
+            <section class = "personal statement">
+                <p> My name is Zhichao Liu, a international student from <b>China</b>. I am currently the senior in UCSD, majoring in</p>
+                <p> Computer Science, BS. I will pursue Master degree on CS in UCSD next year. </p>
+                <p> My interest is on back-end web development, including database and network. </p>
+                <p> I also have some experience on Computer graphics and Computer Vision.</p>
+                <label for="language">Here is the language I can write</label>   
+                <select name="language" id="language">
+                      <option value="">--Please choose an option--</option>
+                      <option value="Java">Java</option>
+                      <option value="C++/C">C/C++</option>
+                      <option value="Python">Python</option>
+                      <option value="Js">Java Script</option>
+                      <option value="Go">Go</option>
+                      <option value="X86">X86 Assembly</option>
+               </select> <br>
+               <div class='rate-language'>
+                  <label for="b">Rate the percentage you expert it:</label>
+                  <form class="range-form" oninput="result.value=parseInt(b.value)">
+                       <input type="range" id="b" name="b" value="50" /> =
+                       <output name="result" for="output">50</output>
+                  </form>
+               </div>
+           </section>
+           <section class = "interests">
+               <div class="intro-button">
+                  <button type="submit" class="three-button">Industry</button>
+               </div>
+               <div class="intro-button">
+                 <button type="submit" class="three-button">Research</button>
+               </div>
+               <div class="intro-button">
+                  <button type="submit" class="three-button">Project</button>
+               </div>
+           </section> 
+        </section>
+
+        
+        <div class="row">
+        <section class="Writing" id="Writing">
+            <hr />
+            <h2>My skills on Computer Science</h2>
+            <table class="writing-table">
+                <caption></caption>
+                <colgroup>
+                    <col span="1" class="writing-type">
+                    <col span="1" class="writing-subject">
+                    <col span="1" class="writing-language">
+                 </colgroup>
+                <tr>
+                  <th>Skill</th>
+                  <th>Level</th>
+                  <th>Releated Courses</th>
+                </tr>
+                <tr>
+                  <td>Network</td>
+                  <td>Medium</td>
+                  <td>CSE 124, CSE 127</td>
+                </tr>
+                <tr>
+                  <td>DataBase</td>
+                  <td>High</td>
+                  <td>CSE 132A, CSE 134B</td>
+                </tr>
+                <tr>
+                  <td>Algorithm</td>
+                  <td>High</td>
+                  <td>CSE 100, CSE 101, CSE 202</td>
+                </tr>
+                <tr>
+                    <td>Front-end</td>
+                    <td>Medium</td>
+                    <td>CSE 110, CSE 134B</td>
+                  </tr>
+                  <tr>
+                    <td>OS and Architecture</td>
+                    <td>Low</td>
+                    <td>CSE 120, CSE 142 </td>
+                  </tr>
+                  <tr>
+                    <td>CV/CG</td>
+                    <td>Medium</td>
+                    <td>CSE 152, CSE 167, CSE 169</td>
+                  </tr>
+                  <tr>
+                    <td>Java</td>
+                    <td>High</td>
+                    <td>CSE 11, CSE 120</td>
+                  </tr>
+                  <tr>
+                    <td>C++</td>
+                    <td>High</td>
+                    <td>CSE 167, CSE 169, CSE 127</td>
+                  </tr>
+                  <tr>
+                    <td>Python</td>
+                    <td>Medium</td>
+                    <td>CSE 150B, CSE 152</td>
+                  </tr>
+                  <tr>
+                    <td>Go</td>
+                    <td>Low</td>
+                    <td>CSE 124</td>
+                  </tr>
+                  <tr>
+                    <td>HTML/CSS/JS</td>
+                    <td>Medium</td>
+                    <td>CSE 110, CSE 134B</td>
+                  </tr>
+                  <tr>
+                    <td>Spring boot/mySQL</td>
+                    <td>Low</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>OpenGL</td>
+                    <td>Medium</td>
+                    <td>CSE 167, CSE 169</td>
+                  </tr>
+                  <tr>
+                    <td>Pandas</td>
+                    <td>Medium</td>
+                    <td>COGS 108</td>
+                  </tr>
+              </table>
+        </section>
+
+        <section class="Login" id="Login">
+            <hr />
+            <h2> Please enter your account if avialibale</h2>
+            <div class="login_form">
+            <p>Login</p>
+            <div class="form">
+                <input type="text" class="form-control" placeholder="Account Name">
+            </div>
+            <div class="form">
+                <input type="text" class="form-control" placeholder="Password">
+            </div>
+            <div class="form">
+                <button type="submit" class="button">Login</button>
+            </div>
+            </div>
+            
+            <div class="register_form"> 
+            <p>Register</p>
+            <div class="form">
+                <input type="text" class="form-control" placeholder="Account Name">
+            </div>
+            <div class="form">
+                <input type="text" class="form-control" placeholder="Password">
+            </div>
+            <div class="form">
+                <input type="text" class="form-control" placeholder="Enter Password Again">
+            </div>
+            <div class="form">
+                <button type="submit" class="button">Login</button>
+            </div>
+            </div>
+
+            <template id="rabbit">
+                <h2>Cute Rabbit</h2>
+                <img src="rabbit.jpg" width="194" height="184">
+            </template>
+
+            <div class="make_rate">
+            <label for="rate_site">Select the rate for the site:</label>
+               <input list="rate_site_data" id="rate_site" name="rate_site" />
+               <datalist id="rate_site_data">
+                   <option value="5">5</option>
+                   <option value="4">4</option>
+                   <option value="3">3</option>
+                   <option value="2">2</option>
+                    <option value="1">1</option>
+              </datalist>
+            </div>
+        </section>
+        </div>
+
+
+        <section class="Pictures" id="Pictures">
+            <hr />
+            <h2>Education Information</h2>
+            <h3>University of California</h3>
+            <p> The <strong>University of California, San Diego</strong> is a public land-grant research university in San Diego, California. </p>
+            <p> Established in 1960 near the pre-existing Scripps Institution of Oceanography, UC San Diego is the southernmost </p>
+            <p> of the ten campuses of the University of California, and offers over 200 undergraduate and graduate degree </p>
+            <p> programs, enrolling 33,343 undergraduate and 9,533 graduate students. </p>
+            <div class="row">
+            <div class = "pic-for-Chelsea">
+                <img width="300" height="300" src="ucsd-logo.jpeg" alt="">
+                <pre>The symbol of UCSD</pre>
+            </div>
+            <iframe class = "video-for-Chelsea" width="500" height="300" 
+               src="https://www.youtube.com/embed/II5bUKJE9oY" 
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+               allowfullscreen>
+            </iframe>
+            </div>
+            <br>
+            <p>I am major in <strong>BS</strong> Computer Science, at<strong>Jacobs School of Engineering</strong>, from 2018-2022. </p>
+            <p>My current GPA is <strong>3.88</strong>, and obtain <strong>Provost Honors</strong> in six terms</p>
+            <p>I will pursue <strong>MS degree</strong> in Computer Science at UC San Diego on Fall 2022. </p>
+            <br>
+            <form class="blue-color shift-color-animated">
+                <fieldset>
+                     <legend style="color:black;">Here are some interests topics I want to explore in MS:: </legend>
+                        <input type="radio" id="1" name="rank">
+                              <label for="1">Cloud Distributed Network</label><br>
+                        <input type="radio" id="2" name="rank">
+                             <label for="2">Database Implementation and Optimization</label><br>
+                       <input type="radio" id="3" name="rank">
+                             <label for="3">Framework Utilization like Spring, Node.js</label><br>
+                       <input type="radio" id="4" name="rank">
+                             <label for="4">Computer Graphics & Physical simulation</label><br>
+                        <br>
+               </fieldset>
+           </form> 
+          
+           <label for="percentage">Percentage you already read:</label>
+           <progress id="percentage" max="100" value="50"> 50% </progress>
+           
+           <h3>Experience</h3>
+           <p>Projects on 3D rendering, light effect, envirmental & toon shading, colision detection, particle effect.</p>
+           <picture >
+             <img class="titan-pic" width="400" height="300" src="amongus.png" alt="" />
+             <img class="titan-pic" width="400" height="300" src="amongus2.png" alt="" />
+           </picture>
+           <br>
+           <p>Projects on <strong>haracter Rigging</strong> and <strong>Physical Simulation</strong></p>
+           <li>Skeleton and Skin rendering, with keyframe animation</li>
+           <li>Clothes simulation, applying aerodynamic force and collision detection</li>    
+           <br>
+           <picture >
+            <img class="titan-pic" width="400" height="300" src="animation.png" alt="" />
+            <img class="titan-pic" width="400" height="300" src="cloth.png" alt="" />
+           </picture>
+           <br>
+           <p>Projects on Photo rendering, Feature Extraction, Corner Detection, and Rectification on image</p>
+           <picture >
+            <img class="titan-pic" width="300" height="300" src="cv1.png" alt="" />
+            <img class="titan-pic" width="300" height="300" src="cv2.png" alt="" />
+            <img class="titan-pic" width="300" height="300" src="cv3.png" alt="" />
+            </picture>
+            <br>
+            <p>Projects on <strong>Pomo Timer Web</strong> within Team</p>
+            <p>Time management, Preference setting, Music switching, Task list</p>
+            <picture >
+            <img class="titan-pic" width="400" height="300" src="pomotimer.png" alt="" />
+            <img class="titan-pic" width="400" height="300" src="pomotimer2.png" alt="" />
+            </picture>
+            <p>Projects on <strong>cloud-based file storage service</strong> called SurfStore using Golang</p>
+            <li>Multiple clients concurrently interacts with service via RPC, based on Dropbox</li>
+            <li>Users access shared set of files, and sync files to and from the cloud</li>
+            <li>Use consistent hashing to manage a dynamic cluster of BlockStore servers for load balancing</li>
+            <br>
+            <picture >
+            <img class="titan-pic" width="500" height="300" src="cloud1.png" alt="" />
+            <img class="titan-pic" width="500" height="300" src="cloud2.png" alt="" />
+            </picture>
+            <br>
+            <p><strong>IBM & CGIU Code and Response Hackathon</strong></p>
+            <p>Design and create a cloud based emergency responding system</p>
+            <p>The Winner team ranking First Place in UCSD with $1000 awards</p>
+            <picture >
+                <img class="titan-pic" width="500" height="300" src="hack.PNG" alt="" />
+            </picture>
+            <br>
+            <p>Serving tutor position in <strong>CSE 21: Math/Algorithm&Systems Analys</strong> for 4 quarters</p>
+            <picture >
+                <img class="titan-pic" width="400" height="300" src="tutor1.png" alt="" />
+                <img class="titan-pic" width="400" height="300" src="tutor2.png" alt="" />
+                <img class="titan-pic" width="400" height="300" src="tutor3.png" alt="" />
+                <img class="titan-pic" width="400" height="300" src="tutor4.png" alt="" />
+            </picture>
+            <br>
+            <br>
+            <br>
+            <br>    
+            <canvas id="Canvas_text" class="blue-color shift-color-animated" width="300" height="100">
+                  Canvas for Animation
+             </canvas>
+             <script>
+                var c = document.getElementById("Canvas_text");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px times";
+                ctx.fillText("More will be in future",10,50);
+            </script>
+            <details>
+                <summary>More</summary>
+                <i>Let see...</i>
+            </details>
+            <p> Now the question is: Do you think I am <strong> capable </strong>? <br>
+                If the answer is <strong> YES </strong>, tell me your rate for me! </p>
+            <form method="get" class="enter_animation">
+                  <div class="enter_animation">
+                      <label for="YN">Yes or No: </label>
+                      <input type="text" name="YN" id="YN" required>
+                  </div>
+                  <div class="enter_animation">
+                       <label for="Animation">If yes, enter your rate: </label>
+                       <input type="text" name="Animation" id="Animation" required>
+                  </div>
+                  <div class="enter_animation">
+                       <input type="submit" value="Subscribe!">
+                  </div>
+           </form>
+        </section>
+
+
+        <section class="Contact" id="Contact">
+        <hr />
+        
+        <section class="blue-color" id="contact-header">
+            <h2>Have Question or Advice?</h2>
+            <div class="row-keep">
+                <div class = "mario">
+                    <img class="rotate" width="50" height="50" src="mario.png" alt="">
+                </div>
+                <div class="contact-header-info">
+                    <div class="contact-top">
+                        <h2>Contact</h2>
+                    </div>
+                    <div class="contact-section">
+                        <h4>Contact me if you have interests</h4>
+                    </div>
+                </div>
+                <div class = "mario">
+                    <img class="rotate" width="50" height="50" src="mario.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="white-color " id="contact-info">
+            <hr />
+            <div class="container">
+                <div class="row">
+                    <div class="left-contact-info">
+                        <h2>Personal Contact Information</h2>
+                        <div>
+                            <span><i class="address"></i>Address: Caminito Fresco, Sandiego</span>
+                            <br />
+                            <span><i class="email"></i>Email: z5liu@ucsd.edu</span>
+                            <br />
+                            <span><i class="phone"></i>Phone: 541-513-0043</span>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="right-contact-info">
+                        <h2>Fill the form if you want to contact with me </h2>
+                        <form>
+                            <div class="form_row">
+                                <div class="fill_form">
+                                    <div class="form">
+                                        <input type="text" class="form-control" placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="fill_form">
+                                    <div class="form">
+                                        <input type="text" class="form-control" placeholder="Your Email address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_row">
+                                <div class="fill_form_message">
+                                    <div class="form">
+                                        <textarea id="message" class="form" rows="3" cols="30" placeholder="Any Message"></textarea>
+                                    </div>
+                                    <div class="form-button">
+                                        <button type="submit" class="button">Submit Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    </main>
+
+
+    <footer>
+        <hr />
+        <nav class="green-color">
+            <ul class="foot-nav">
+              <li class="foot-item"><a href="#">Home</a></li>
+              <li class="foot-item"><a href="#Information">Information</a></li>
+              <li class="foot-item"><a href="#Writing">Skills</a></li>
+              <li class="foot-item"><a href="#Pictures">Experience</a></li>
+              <li class="foot-item"><a href="#Game">Education</a></li>
+              <li class="foot-item"><a href="#Login">Login</a></li>
+              <li class="foot-item"><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <pre class="foot-author blue-color shift-color-animated">
+           &copy; Zhichao Design 2022
+        </pre>
+    </footer>
+</body>
+
+
+</html>
+
